@@ -21,10 +21,16 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
 
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch (parseError) {
+        const text = await response.text();
+        throw new Error(text || "Invalid JSON response from server.");
+      }
 
       if (!response.ok || !data.success) {
-        throw new Error(data.message || "Failed to send the message.");
+        throw new Error(data.message || `Failed to send the message. (${response.status})`);
       }
 
       setSent(true);
