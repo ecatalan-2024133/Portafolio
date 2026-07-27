@@ -2,7 +2,7 @@ import novabankImage from "../assets/images/novabank.png";
 import scophImage from "../assets/images/scoph.png";
 import felixsImage from "../assets/images/felixs.png";
 import biovidaImage from "../assets/images/biovida.png";
-import velureImage from "../assets/images/velure.png";
+import velureImage from "../assets/images/Velure.png";
 import listenAIImage from "../assets/images/listen.png";
 
 /* ─── Personal ─────────────────────────────────────────────────────────────── */
