@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Download, ArrowRight, MapPin, ChevronDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/BrandIcons";
+import yoImage from "../assets/images/yo.jpeg";
 import { personal } from "../data/portfolio";
 import { staggerContainer, staggerItem, heroTitle } from "../animations/variants";
 
@@ -154,15 +155,6 @@ function ParticleCanvas() {
 
 /* ── Developer Avatar ──────────────────────────────────────────────────── */
 function DevAvatar() {
-  const floatingBadges = [
-    { label: "React", angle: -60, dist: 150 },
-    { label: "Node.js", angle: 0, dist: 150 },
-    { label: "TypeScript", angle: 60, dist: 150 },
-    { label: "AWS", angle: 120, dist: 150 },
-    { label: "Docker", angle: 180, dist: 150 },
-    { label: "PostgreSQL", angle: 240, dist: 150 },
-  ];
-
   return (
     <div className="relative flex items-center justify-center" style={{ width: 360, height: 360 }}>
       {/* Outer glow */}
@@ -233,134 +225,61 @@ function DevAvatar() {
 
       {/* Center card */}
       <motion.div
-        className="relative flex flex-col items-center justify-center rounded-2xl"
+        className="relative flex flex-col items-center overflow-hidden rounded-3xl"
         style={{
-          width: 190,
-          height: 190,
+          width: 220,
           background: "var(--card)",
           border: "1px solid rgba(0,81,135,0.4)",
-          boxShadow: "0 0 40px rgba(0,81,135,0.25), inset 0 0 40px rgba(0,81,135,0.05)",
+          boxShadow: "0 0 40px rgba(0,81,135,0.18)",
           zIndex: 1,
         }}
         animate={{ y: [0, -8, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       >
-        {/* Grid pattern inside card */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage: "linear-gradient(rgba(0,81,135,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,81,135,0.06) 1px,transparent 1px)",
-            backgroundSize: "20px 20px",
-            borderRadius: "1rem",
-          }}
-        />
-        <div
-          style={{
-            width: 64,
-            height: 64,
-            borderRadius: "1rem",
-            background: "linear-gradient(135deg,#005187,#0077cc)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "1.5rem",
-            fontWeight: 800,
-            color: "#f0f6ff",
-            fontFamily: "var(--font-display)",
-            boxShadow: "0 0 20px rgba(0,119,204,0.3)",
-            marginBottom: "0.75rem",
-            position: "relative",
-            zIndex: 1,
-          }}
-        >
-          EC
-        </div>
-        <p
-          style={{
-            fontSize: "0.85rem",
-            fontWeight: 700,
-            color: "var(--text)",
-            fontFamily: "var(--font-display)",
-            zIndex: 1,
-            textAlign: "center",
-          }}
-        >
-          Edgar Catalán
-        </p>
-        <p
-          style={{
-            fontSize: "0.7rem",
-            color: "#0077cc",
-            fontFamily: "var(--font-mono)",
-            zIndex: 1,
-            marginTop: "0.2rem",
-          }}
-        >
-          Software Developer
-        </p>
-        {/* Status dot */}
-        <div
-          style={{
-            position: "absolute",
-            top: 12,
-            right: 12,
-            display: "flex",
-            alignItems: "center",
-            gap: 4,
-            zIndex: 1,
-          }}
-        >
-          <motion.div
-            style={{ width: 6, height: 6, borderRadius: "50%", background: "#22c55e" }}
-            animate={{ opacity: [1, 0.3, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
+        <div style={{ width: "100%", height: 210, overflow: "hidden" }}>
+          <img
+            src={yoImage}
+            alt="Roberto Catalán"
+            className="w-full h-full object-cover"
+            style={{ display: "block" }}
           />
-          <span style={{ fontSize: "0.6rem", color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}>
-            online
-          </span>
+        </div>
+        <div className="w-full px-5 pb-5 pt-4 text-center" style={{ background: "var(--card)" }}>
+          <p
+            style={{
+              fontSize: "0.95rem",
+              fontWeight: 700,
+              color: "var(--text)",
+              fontFamily: "var(--font-display)",
+            }}
+          >
+            Edgar Catalán
+          </p>
+          <p
+            style={{
+              fontSize: "0.75rem",
+              color: "#0077cc",
+              fontFamily: "var(--font-mono)",
+              marginTop: "0.35rem",
+            }}
+          >
+            Software Developer
+          </p>
         </div>
       </motion.div>
 
-      {/* Floating tech badges */}
-      {floatingBadges.map((badge, i) => {
-        const rad = ((badge.angle - 90) * Math.PI) / 180;
-        const x = Math.cos(rad) * badge.dist;
-        const y = Math.sin(rad) * badge.dist;
-        return (
-          <motion.div
-            key={badge.label}
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-              background: "var(--card)",
-              border: "1px solid rgba(0,81,135,0.3)",
-              borderRadius: "999px",
-              padding: "4px 10px",
-              fontSize: "0.65rem",
-              fontWeight: 600,
-              color: "var(--text-muted)",
-              fontFamily: "var(--font-mono)",
-              whiteSpace: "nowrap",
-              boxShadow: "0 2px 12px rgba(0,0,0,0.3)",
-              zIndex: 2,
-            }}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1 + i * 0.1, duration: 0.4 }}
-            whileHover={{
-              scale: 1.1,
-              borderColor: "#0077cc",
-              color: "#0077cc",
-              boxShadow: "0 0 12px rgba(0,119,204,0.3)",
-            }}
-          >
-            {badge.label}
-          </motion.div>
-        );
-      })}
+      <div
+        style={{
+          position: "absolute",
+          top: 16,
+          right: 16,
+          display: "flex",
+          alignItems: "center",
+          gap: 4,
+          zIndex: 2,
+        }}
+      >
+      </div>
     </div>
   );
 }
@@ -369,7 +288,7 @@ function DevAvatar() {
 export default function Hero() {
   return (
     <section
-      id="inicio"
+      id="home"
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{ background: "var(--bg)" }}
     >
@@ -405,7 +324,7 @@ export default function Hero() {
                   animate={{ opacity: [1, 0.4, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 />
-                Disponible para proyectos
+                Available for projects
               </span>
             </motion.div>
 
@@ -415,7 +334,7 @@ export default function Hero() {
                 className="text-sm font-medium"
                 style={{ color: "var(--text-muted)", fontFamily: "var(--font-mono)" }}
               >
-                Hola, soy
+                Hello, I'm
               </p>
               <h1
                 className="leading-none tracking-tight"
@@ -426,9 +345,9 @@ export default function Hero() {
                   color: "var(--text)",
                 }}
               >
-                <span className="gradient-text">Edgar Roberto</span>
+                <span style={{ color: "var(--text)" }}>Roberto</span>
                 <br />
-                <span style={{ color: "var(--text)" }}>Catalán Méndez</span>
+                <span style={{ color: "var(--text)" }}>Catalán</span>
               </h1>
               <div
                 className="text-xl md:text-2xl font-semibold pt-2"
@@ -461,12 +380,12 @@ export default function Hero() {
             <motion.div variants={staggerItem} className="flex flex-wrap gap-3 pt-1">
               <motion.button
                 className="btn-primary"
-                onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.97 }}
               >
                 <ArrowRight size={16} />
-                Contáctame
+                Contact me
               </motion.button>
               <motion.a
                 href={personal.cvUrl}
@@ -476,14 +395,14 @@ export default function Hero() {
                 whileTap={{ scale: 0.97 }}
               >
                 <Download size={16} />
-                Descargar CV
+                Download CV
               </motion.a>
             </motion.div>
 
             {/* Socials */}
             <motion.div variants={staggerItem} className="flex items-center gap-3 pt-1">
               <span className="text-sm" style={{ color: "var(--text-subtle)" }}>
-                Encuéntrame en
+                Find me on
               </span>
               {[
                 { href: personal.github, Icon: GithubIcon, label: "GitHub" },
@@ -550,20 +469,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.button
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
-        style={{ color: "var(--text-subtle)" }}
-        onClick={() => document.getElementById("sobre-mi")?.scrollIntoView({ behavior: "smooth" })}
-        animate={{ y: [0, 6, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        aria-label="Scroll hacia abajo"
-      >
-        <span className="text-xs" style={{ fontFamily: "var(--font-mono)" }}>
-          scroll
-        </span>
-        <ChevronDown size={16} />
-      </motion.button>
+
     </section>
   );
 }

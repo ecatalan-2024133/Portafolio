@@ -1,316 +1,227 @@
+import novabankImage from "../assets/images/novabank.png";
+import scophImage from "../assets/images/scoph.png";
+import felixsImage from "../assets/images/felixs.png";
+import biovidaImage from "../assets/images/biovida.png";
+import velureImage from "../assets/images/velure.png";
+import listenAIImage from "../assets/images/listen.png";
+
 /* ─── Personal ─────────────────────────────────────────────────────────────── */
 export const personal = {
-  firstName: "Edgar Roberto",
-  lastName: "Catalán Méndez",
-  fullName: "Edgar Roberto Catalán Méndez",
-  initials: "EC",
-  titles: ["Full Stack Developer", "Backend Developer", "Frontend Developer", "Software Engineer"],
+  firstName: "Roberto",
+  lastName: "Catalán",
+  fullName: "Roberto Catalán",
+  initials: "RC",
+  titles: ["Full Stack Developer", "Backend Developer", "Frontend Developer"],
   tagline: "Software Developer",
   description:
-    "Ingeniero de software con más de 5 años de experiencia diseñando y construyendo aplicaciones web de alto rendimiento. Especializado en arquitecturas escalables, APIs robustas y experiencias de usuario fluidas. Apasionado por el código limpio, las buenas prácticas y la entrega continua de valor.",
-  location: "Ciudad de México, México",
-  email: "edgar.catalan@outlook.com",
-  phone: "+52 55 3000 0000",
-  whatsapp: "525530000000",
-  github: "https://github.com/edgar-catalan",
-  linkedin: "https://linkedin.com/in/edgar-catalan",
+    "Full Stack Developer focused on building modern, high-performance web solutions. Specialized in creating applications with React, .NET, and Node.js, integrating REST APIs, relational and NoSQL databases, and Docker deployment workflows. I learn quickly, adapt to new technologies, and keep a strong emphasis on clean code, scalability, and continuous improvement.",
+  location: "Ciudad de Guatemala, Guatemala",
+  email: "rbertocatalan@gmail.com",
+  phone: "+502 5434-4476",
+  whatsapp: "+502 5434-4476",
+  github: "https://github.com/r0b3r-c4t",
+  linkedin: "https://www.linkedin.com/in/roberto-c-256752383/",
   twitter: "https://twitter.com/edgar_dev",
   available: true,
   yearsExperience: 5,
-  projectsDelivered: 40,
+  projectsDelivered: 10,
   linesOfCode: "500K+",
   cvUrl: "/cv-edgar-catalan.pdf",
   stats: [
-    { value: "5+", label: "Años de experiencia" },
-    { value: "40+", label: "Proyectos entregados" },
-    { value: "15+", label: "Tecnologías" },
-    { value: "3", label: "Certificaciones" },
+    { value: "5+", label: "Years of experience" },
+    { value: "10+", label: "Projects delivered" },
+    { value: "15+", label: "Technologies" },
+    { value: "1", label: "Certifications" },
   ],
 };
 
 /* ─── Technologies ─────────────────────────────────────────────────────────── */
-export const technologies = [
-  {
-    category: "Frontend",
-    icon: "monitor",
-    color: "#0077cc",
-    items: [
-      { name: "React", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 88 },
-      { name: "Vue.js", level: 75 },
-      { name: "Tailwind CSS", level: 92 },
-      { name: "JavaScript", level: 95 },
-    ],
-  },
-  {
-    category: "Backend",
-    icon: "server",
-    color: "#005187",
-    items: [
-      { name: "Node.js", level: 92 },
-      { name: "Express.js", level: 90 },
-      { name: "NestJS", level: 85 },
-      { name: "Python", level: 80 },
-      { name: "FastAPI", level: 78 },
-      { name: "PHP / Laravel", level: 72 },
-    ],
-  },
-  {
-    category: "Bases de Datos",
-    icon: "database",
-    color: "#004a7a",
-    items: [
-      { name: "PostgreSQL", level: 90 },
-      { name: "MySQL", level: 88 },
-      { name: "MongoDB", level: 82 },
-      { name: "Redis", level: 78 },
-      { name: "Prisma ORM", level: 88 },
-      { name: "TypeORM", level: 80 },
-    ],
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: "cloud",
-    color: "#003d66",
-    items: [
-      { name: "AWS", level: 80 },
-      { name: "Docker", level: 88 },
-      { name: "Kubernetes", level: 68 },
-      { name: "GitHub Actions", level: 85 },
-      { name: "Terraform", level: 65 },
-      { name: "Vercel / Netlify", level: 90 },
-    ],
-  },
-  {
-    category: "Herramientas",
-    icon: "wrench",
-    color: "#0064a8",
-    items: [
-      { name: "Git", level: 95 },
-      { name: "Linux", level: 82 },
-      { name: "Vite", level: 90 },
-      { name: "Jest / Vitest", level: 85 },
-      { name: "Playwright", level: 78 },
-      { name: "Figma", level: 70 },
-    ],
-  },
-];
+export const technologies = {
+  frontend: [
+    { name: "React", icon: "SiReact", level: 95 },
+    { name: "TypeScript", icon: "SiTypescript", level: 90 },
+    { name: "HTML5", icon: "SiHtml5", level: 98 },
+    { name: "CSS3", icon: "SiCss3", level: 95 },
+    { name: "Tailwind CSS", icon: "SiTailwindcss", level: 95 },
+    { name: "JavaScript", icon: "SiJavascript", level: 95 },
+    { name: "Zustand", icon: "SiZustand", level: 85 },
+    { name: "Bootstrap", icon: "SiBootstrap", level: 90 },
+    { name: "React Router", icon: "SiReactrouter", level: 85 }
+  ],
+  backend: [
+    { name: "Node.js", icon: "SiNodedotjs", level: 85 },
+    { name: "Fastify", icon: "SiFastify", level: 90 },
+    { name: "C#", icon: "SiSharp", level: 80 },
+    { name: "ASP.NET Core", icon: "SiDotnet", level: 80 },
+    { name: "Java", icon: "SiOpenjdk", level: 80 },
+    { name: "Spring Boot", icon: "SiSpringboot", level: 80 },
+    { name: "REST APIs", icon: "SiPostman", level: 90 },
+  ],
+  databases: [
+    { name: "PostgreSQL", icon: "SiPostgresql", level: 90 },
+    { name: "MongoDB", icon: "SiMongodb", level: 85 },
+    { name: "Supabase", icon: "SiSupabase", level: 85 },
+    { name: "MySQL", icon: "SiMysql", level: 85 }
+  ],
+  cloud: [
+    { name: "Docker", icon: "SiDocker", level: 90 },
+    { name: "Render", icon: "SiRender", level: 90 },
+    { name: "Vercel", icon: "SiVercel", level: 90 },
+    { name: "Nginx", icon: "SiNginx", level: 75 },
+  ],
+  tools: [
+    { name: "Git", icon: "SiGit", level: 95 },
+    { name: "GitHub", icon: "SiGithub", level: 95 },
+    { name: "Figma", icon: "SiFigma", level: 80 },
+    { name: "Vite", icon: "SiVite", level: 90 },
+    { name: "Linux", icon: "SiLinux", level: 90 },
+    { name: "Postman", icon: "SiPostman", level: 95 },
+    { name: "pnpm", icon: "SiPnpm", level: 90 },
+  ]
+};
+
+export const portfolioData = {
+  technologies,
+};
 
 /* ─── Projects ─────────────────────────────────────────────────────────────── */
 export const projects = [
   {
     id: 1,
-    title: "Nexus ERP — Gestión Empresarial",
+    title: "Novabank - Banking System",
     description:
-      "Sistema ERP completo para empresas medianas. Módulos de inventario, facturación, RRHH y reportes en tiempo real. Soporte para 500+ usuarios concurrentes con arquitectura de microservicios.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&auto=format",
-    tags: ["React", "Node.js", "PostgreSQL", "Redis", "Docker", "AWS"],
+      "Complete banking system with account management, transfers, payments, and financial reporting features. Built with advanced security and regulatory compliance in mind.",
+    image: novabankImage,
+    tags: ["React", "Node.js", "PostgreSQL", "ASP.NET", "Fastify", "Docker"],
     category: "fullstack",
     status: "production",
-    github: "https://github.com/edgar-catalan/nexus-erp",
-    demo: "https://nexus-erp.example.com",
-    date: "Dic 2023",
+    github: "https://github.com/r0b3r-c4t/Novabank.git",
+    demo: "https://novabank-nine-rosy.vercel.app/",
+    date: "2026",
     featured: true,
   },
   {
     id: 2,
-    title: "Atlas FinTech API",
+    title: "SCOPH - Medical Scheduling and Inventory Management",
     description:
-      "API REST de alto rendimiento para servicios financieros. Procesamiento de transacciones, validación de identidad y reportes regulatorios. 99.99% de uptime en producción.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&auto=format",
-    tags: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "JWT", "AWS Lambda"],
-    category: "backend",
-    status: "production",
-    github: "https://github.com/edgar-catalan/atlas-api",
-    demo: "https://atlas-api.example.com/docs",
-    date: "Jun 2023",
+      "Medical scheduling and inventory management system for healthcare organizations. Enables scheduling of medical events, patient tracking, and resource administration.",
+    image: scophImage,
+    tags: ["React", "Node.js", "PostgreSQL", "ASP.NET", "Fastify", "Docker"],
+    category: "fullstack",
+    status: "open-source",
+    github: "https://github.com/r0b3r-c4t/SCOPH-Gestor-Jornadas-Medicas.git",
+    date: "2026",
     featured: true,
   },
   {
     id: 3,
-    title: "Pulsar Analytics Dashboard",
+    title: "Listen AI - Audio-to-Text Transcription App",
     description:
-      "Dashboard de analíticas en tiempo real para monitoreo de KPIs empresariales. Visualizaciones interactivas, alertas automáticas y exportación de reportes.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop&auto=format",
-    tags: ["React", "TypeScript", "D3.js", "WebSockets", "Node.js", "MongoDB"],
+      "Audio-to-text transcription application using AI-powered natural language processing. Generates a downloadable DOCX file with the transcribed text.",
+    image: listenAIImage,
+    tags: ["Python", "CSS", "HTML5"],
     category: "fullstack",
-    status: "production",
-    github: "https://github.com/edgar-catalan/pulsar-dashboard",
-    demo: "https://pulsar-analytics.example.com",
-    date: "Ene 2023",
+    status: "open-source",
+    github: "https://github.com/r0b3r-c4t/Listen-AI",
+    date: "2025",
     featured: true,
   },
   {
     id: 4,
-    title: "Horizon UI Component Library",
+    title: "Felix's - Veterinary Clinic Management",
     description:
-      "Biblioteca de componentes React de código abierto con 70+ componentes accesibles, Storybook integrado y soporte completo para TypeScript. 2k+ estrellas en GitHub.",
-    image: "https://images.unsplash.com/photo-1545670723-196ed0954986?w=800&h=500&fit=crop&auto=format",
-    tags: ["React", "TypeScript", "Tailwind CSS", "Storybook", "Radix UI", "Vitest"],
-    category: "frontend",
+      "Management system for veterinary clinics, offering appointment control, animal medical history tracking, and inventory administration.",
+    image: felixsImage,
+    tags: ["Java", "JavaFX", "CSS", "MySQL"],
+    category: "fullstack",
     status: "open-source",
-    github: "https://github.com/edgar-catalan/horizon-ui",
-    demo: "https://horizon-ui.example.com",
-    date: "Sep 2022",
+    github: "https://github.com/r0b3r-c4t/Felix-s.git",
+    date: "2025",
     featured: false,
   },
-];
+  {
+    id: 5,
+    title: "Biovida - Pharmaceutical Website",
+    description:
+      "Website for a pharmaceutical company with product information, services, and contact details. Includes responsive design implementation.",
+    image: biovidaImage,
+    tags: ["HTML5", "CSS"],
+    category: "frontend",
+    status: "open-source",
+    github: "https://github.com/r0b3r-c4t/Biovida.git",
+    date: "2025",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Velure - Vehicle Dealership Management System",
+    description:
+      "Management system for vehicle dealerships, enabling inventory control, quote management, and sales tracking.",
+    image: velureImage,
+    tags: ["Java", "CSS", "HTML5", "MySQL"],
+    category: "fullstack",
+    status: "open-source",
+    github: "https://github.com/r0b3r-c4t/Velure",
+    date: "2025",
+    featured: false,
+  },
 
-/* ─── Experience ────────────────────────────────────────────────────────────── */
-export const experience = [
-  {
-    id: 1,
-    company: "Syncorp Technologies",
-    role: "Senior Full Stack Developer",
-    type: "Full-time",
-    startDate: "Ene 2022",
-    endDate: "Presente",
-    current: true,
-    location: "CDMX, México · Remoto",
-    description:
-      "Lidero el desarrollo del producto central de una plataforma B2B SaaS con más de 20,000 usuarios activos. Responsable de decisiones de arquitectura, revisiones de código y mentoring de un equipo de 5 ingenieros. Reduje la latencia de la API en un 45% mediante optimización de consultas y caché con Redis.",
-    achievements: [
-      "Redujo latencia de API en 45% con optimización de queries y Redis",
-      "Lideró migración a microservicios, mejorando escalabilidad en 3x",
-      "Implementó CI/CD con GitHub Actions, reduciendo tiempo de deploy en 70%",
-    ],
-    technologies: ["React", "TypeScript", "NestJS", "PostgreSQL", "Redis", "AWS", "Docker", "K8s"],
-  },
-  {
-    id: 2,
-    company: "Axiom Digital Studio",
-    role: "Full Stack Developer",
-    type: "Full-time",
-    startDate: "Mar 2020",
-    endDate: "Dic 2021",
-    current: false,
-    location: "Guadalajara, México",
-    description:
-      "Desarrollé y entregué 10 proyectos para clientes de industrias como fintech, salud y e-commerce. Introduje prácticas de testing automatizado que redujeron bugs en producción en un 60%. Lideré la migración de una aplicación monolítica PHP a una arquitectura moderna React + Node.js.",
-    achievements: [
-      "Entregó 10 proyectos a tiempo y dentro del presupuesto",
-      "Redujo bugs en producción en 60% con testing automatizado",
-      "Migró app monolítica PHP a React + Node.js",
-    ],
-    technologies: ["React", "Node.js", "Vue.js", "MySQL", "GraphQL", "GitHub Actions", "Laravel"],
-  },
-  {
-    id: 3,
-    company: "Vertex Agency",
-    role: "Junior Frontend Developer",
-    type: "Full-time",
-    startDate: "Jul 2019",
-    endDate: "Feb 2020",
-    current: false,
-    location: "CDMX, México",
-    description:
-      "Desarrollé interfaces responsivas para clientes de los sectores retail, educación y gobierno. Colaboré con diseñadores para implementar diseños pixel-perfect y garantizar compatibilidad cross-browser.",
-    achievements: [
-      "Implementó 15+ interfaces responsivas para clientes enterprise",
-      "Mejoró rendimiento de carga en 40% con optimizaciones de assets",
-      "Primer desarrollador del equipo en adoptar TypeScript",
-    ],
-    technologies: ["React", "JavaScript", "SCSS", "REST APIs", "Webpack", "jQuery"],
-  },
 ];
 
 /* ─── Education ─────────────────────────────────────────────────────────────── */
 export const education = [
   {
     id: 1,
-    institution: "Universidad Nacional Autónoma de México",
-    shortName: "UNAM",
-    degree: "Ingeniería en Computación",
-    period: "2015 – 2019",
+    institution: "Centro Educativo Técnico Laboral Kinal",
+    shortName: "Kinal",
+    degree: "Technical Specialist in Computer Science",
+    period: "2024 – 2026",
     description:
-      "Titulado con mención honorífica. Tesis sobre optimización de algoritmos para sistemas distribuidos. Participé en competencias de programación competitiva representando a la facultad.",
-    highlights: ["Sistemas Distribuidos", "Algoritmos y Estructuras de Datos", "Ingeniería de Software", "Bases de Datos"],
-    gpa: "9.2 / 10",
+      "Training focused on software development, databases, web development, and application architecture. Participated in academic projects using modern technologies and development methodologies.",
+    highlights: [
+      "Web Development",
+      "Databases",
+      "Object-Oriented Programming",
+      "Software Architecture"]
   },
   {
     id: 2,
-    institution: "Instituto Tecnológico de Estudios Superiores",
-    shortName: "ITES",
-    degree: "Técnico en Programación",
-    period: "2012 – 2015",
+    institution: "Self-Taught Learning",
+    shortName: "Self Learning",
+    degree: "Full Stack Development",
+    period: "2024 – Present",
     description:
-      "Formación técnica en programación orientada a objetos, desarrollo web y bases de datos relacionales.",
-    highlights: ["Programación OOP", "Desarrollo Web", "SQL", "Redes"],
-    gpa: "9.6 / 10",
-  },
-];
-
-/* ─── Certifications ────────────────────────────────────────────────────────── */
-export const certifications = [
-  {
-    id: 1,
-    name: "AWS Certified Solutions Architect",
-    subtitle: "Associate Level",
-    issuer: "Amazon Web Services",
-    issuerShort: "AWS",
-    date: "Octubre 2023",
-    expiresDate: "Octubre 2026",
-    credentialId: "AWS-SAA-C03-ECM",
-    color: "#FF9900",
-    verified: true,
-  },
-  {
-    id: 2,
-    name: "Professional Scrum Master I",
-    subtitle: "PSM I",
-    issuer: "Scrum.org",
-    issuerShort: "Scrum.org",
-    date: "Marzo 2022",
-    credentialId: "PSM-I-ECM-2022",
-    color: "#009FDA",
-    verified: true,
-  },
-  {
-    id: 3,
-    name: "Meta React Developer",
-    subtitle: "Professional Certificate",
-    issuer: "Meta / Coursera",
-    issuerShort: "Meta",
-    date: "Junio 2021",
-    credentialId: "META-RD-ECM-2021",
-    color: "#0082FB",
-    verified: true,
-  },
-  {
-    id: 4,
-    name: "Node.js Application Developer",
-    subtitle: "JSNAD Certification",
-    issuer: "OpenJS Foundation",
-    issuerShort: "OpenJS",
-    date: "Enero 2021",
-    credentialId: "JSNAD-ECM-2021",
-    color: "#5FA04E",
-    verified: true,
-  },
+      "Continuous self-learning through official documentation, personal projects, and solving real-world problems, focusing on modern web application technologies.",
+    highlights: [
+      "React",
+      "ASP.NET Core",
+      "Fastify",
+      "Docker"
+    ],
+  }
 ];
 
 /* ─── Skills ───────────────────────────────────────────────────────────────── */
 export const skills = {
   soft: [
-    { name: "Liderazgo Técnico", level: 90 },
-    { name: "Comunicación Efectiva", level: 88 },
-    { name: "Resolución de Problemas", level: 95 },
-    { name: "Trabajo en Equipo", level: 92 },
-    { name: "Gestión del Tiempo", level: 85 },
+    { name: "Technical Leadership", level: 90 },
+    { name: "Effective Communication", level: 88 },
+    { name: "Problem Solving", level: 95 },
+    { name: "Teamwork", level: 92 },
+    { name: "Time Management", level: 85 },
     { name: "Mentoring", level: 80 },
   ],
   hard: [
-    { name: "Diseño de Sistemas", level: 88 },
-    { name: "Revisión de Código", level: 92 },
-    { name: "Optimización de Rendimiento", level: 90 },
+    { name: "System Design", level: 88 },
+    { name: "Code Review", level: 92 },
+    { name: "Performance Optimization", level: 90 },
     { name: "CI/CD Pipelines", level: 85 },
-    { name: "Seguridad Web (OWASP)", level: 82 },
-    { name: "Arquitectura de Software", level: 85 },
+    { name: "Web Security (OWASP)", level: 82 },
+    { name: "Software Architecture", level: 85 },
   ],
   languages: [
-    { name: "Español", level: 100, label: "Nativo" },
-    { name: "Inglés", level: 85, label: "Avanzado (B2)" },
-    { name: "Portugués", level: 40, label: "Básico" },
+    { name: "Spanish", level: 100, label: "Native" },
+    { name: "English", level: 85, label: "Advanced (B2)" },
+    { name: "Portuguese", level: 40, label: "Basic" },
   ],
 };

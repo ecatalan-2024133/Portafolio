@@ -13,7 +13,7 @@ export default function ThemeToggle({ isDark, toggle }) {
       }}
       whileHover={{ scale: 1.05, borderColor: "#005187", color: "#0077cc" }}
       whileTap={{ scale: 0.95 }}
-      aria-label={isDark ? "Activar modo claro" : "Activar modo oscuro"}
+      aria-label={isDark ? "Activate light mode" : "Activate dark mode"}
     >
       <AnimateIcon isDark={isDark} />
     </motion.button>
