@@ -27,7 +27,7 @@ export default function ScrollToTop() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
-          aria-label="Volver arriba"
+          aria-label="Scroll to top"
         >
           <ArrowUp size={18} />
         </motion.button>

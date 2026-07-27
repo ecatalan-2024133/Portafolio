@@ -15,7 +15,7 @@ export default function Loader({ visible }) {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            EC
+            RC
           </motion.div>
           <div className="loader-bar">
             <motion.div

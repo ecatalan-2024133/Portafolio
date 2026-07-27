@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useTheme } from "./hooks/useTheme";
 import Navbar from "./components/Navbar";
 import Loader from "./components/Loader";
 import CustomCursor from "./components/CustomCursor";
@@ -9,16 +8,15 @@ import Footer from "./components/Footer";
 
 import Hero from "./sections/Hero";
 // import About from "./sections/About";
-// import Technologies from "./sections/Technologies";
-// import Projects from "./sections/Projects";
+import Technologies from "./sections/Technologies";
+import Projects from "./sections/Projects";
 // import Experience from "./sections/Experience";
-// import Education from "./sections/Education";
+import Education from "./sections/Education";
 // import Certifications from "./sections/Certifications";
-// import Skills from "./sections/Skills";
-// import Contact from "./sections/Contact";
+import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
 
 export default function App() {
-  const { toggleTheme, isDark } = useTheme();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -33,17 +31,17 @@ export default function App() {
         <>
           <CustomCursor />
           <ScrollProgress />
-          <Navbar isDark={isDark} toggleTheme={toggleTheme} />
-          <main>
+          <Navbar />
+          <main className="pt-16" style={{ background: "var(--bg)" }}>
             <Hero />
-            {/* <About />
             <Technologies />
-            <Projects />
-            <Experience />
-            <Education />
-            <Certifications />
             <Skills />
-            <Contact /> */}
+            <Projects />
+            <Education />
+            <Contact />
+            {/* <About />
+            <Experience />
+            <Certifications /> */}
           </main>
           <Footer />
           <ScrollToTop />
