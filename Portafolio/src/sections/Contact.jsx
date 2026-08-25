@@ -74,8 +74,8 @@ export default function Contact() {
               color: "var(--text)",
             }}
           >
-            Let's work{" "}
-            <span className="gradient-text">together</span>
+            
+            <span >Let's work together</span>
           </h2>
           <p className="mt-4 text-base max-w-lg mx-auto" style={{ color: "var(--text-muted)" }}>
             Do you have a project in mind or want to discuss opportunities?

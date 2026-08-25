@@ -23,8 +23,8 @@ export default function Education() {
               color: "var(--text)",
             }}
           >
-            Academic education
-            <span className="gradient-text">.</span>
+            
+            <span>Academic education</span>
           </h2>
         </motion.div>
 
