@@ -64,8 +64,7 @@ export default function Projects() {
                                 color: "var(--text)",
                             }}
                         >
-                            Featured projects
-                            <span className="gradient-text">.</span>
+                            <span>Featured projects</span>
                         </h2>
                     </div>
 

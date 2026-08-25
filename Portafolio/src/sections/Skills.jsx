@@ -89,8 +89,8 @@ export default function Skills() {
                             color: "var(--text)",
                         }}
                     >
-                        Skills and{" "}
-                        <span className="gradient-text">competencies</span>
+                        
+                        <span>Skills and competencies</span>
                     </h2>
                 </motion.div>
 
