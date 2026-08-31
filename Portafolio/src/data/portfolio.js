@@ -26,7 +26,7 @@ export const personal = {
   yearsExperience: 3,
   projectsDelivered: 10,
   linesOfCode: "500K+",
-  cvUrl: "/cv-edgar-catalan.pdf",
+  cvUrl: "/CV_Edgar_Catalán_2026.pdf",
   stats: [
     { value: "3+", label: "Years of experience" },
     { value: "10+", label: "Projects delivered" },
